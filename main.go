@@ -90,7 +90,7 @@ func main() {
 
 	router.Mount("/v1", v1Router)
 	srv := &http.Server{
-		Addr:              "localhost:" + port,
+		Addr:              "0.0.0.0:" + port,
 		Handler:           router,
 		ReadHeaderTimeout: time.Second * 5,
 	}
