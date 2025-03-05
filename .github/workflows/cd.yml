@@ -29,7 +29,7 @@ jobs:
            export_default_credentials: true
 
       - name: Verify authentication
-        run: gcloud auth list
+        run: gcloud auth list 
        
          
       - name: Set Google Cloud project
