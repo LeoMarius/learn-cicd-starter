@@ -22,13 +22,15 @@ jobs:
       - name: Build the app
         run: ./scripts/buildprod.sh
 
-      - name: Set up Google Cloud authentication
+
+      - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v1
+
+        
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v1
         with:
-          service_account_key: ${{ secrets.GCP_CREDENTIALS }}
-          project_id: notely-452814
-          install_components: 'gke-gcloud-auth-plugin'
-          export_default_credentials: true
+          credentials_json: ${{ secrets.GCP_CREDENTIALS }}
 
       - name: Verify authentication
         run: |
