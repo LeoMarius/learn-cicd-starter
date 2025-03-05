@@ -27,9 +27,6 @@ jobs:
       - name: Run cosec
         run: gosec ./...
 
-      - name: Force Failure
-        run: (exit 0)
-
   style:
     name: Style
     runs-on: ubuntu-latest
