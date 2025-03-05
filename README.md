@@ -1,4 +1,4 @@
-Is my tests passed : ![My test statut](https://github.com/LeoMarius/learn-cicd-starter/actions/workflows/ci.yaml/badge.svg)
+Is my tests passed : ![My test statut](https://github.com/LeoMarius/learn-cicd-starter/actions/workflows/ci.yml/badge.svg)
 
 
 
