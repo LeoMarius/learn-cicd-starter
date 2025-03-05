@@ -25,12 +25,16 @@ jobs:
       - name: Set up Google Cloud authentication
         uses: google-github-actions/setup-gcloud@v1
         with:
-           service_account_key: ${{ secrets.GCP_CREDENTIALS }}
-           export_default_credentials: true
+          service_account_key: ${{ secrets.GCP_CREDENTIALS }}
+          project_id: notely-452814
+          install_components: 'gke-gcloud-auth-plugin'
+          export_default_credentials: true
 
       - name: Verify authentication
-        run: gcloud auth list 
-       
+        run: |
+          gcloud auth list 
+          gcloud config list account
+        
          
       - name: Set Google Cloud project
         run: gcloud config set project notely-452814
